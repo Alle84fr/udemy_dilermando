@@ -112,3 +112,63 @@ print(divisao.split())
 com_caracteres = "separa com base no: dois ponto: a frase, email, nome, etc"
 print('')
 print(com_caracteres.split(":"))
+
+# escopo
+# hall de atuação da varável
+# global - vista do começo ao fim
+# local - conhece quando chama a função, por exemplo
+
+# DECLARAÇÃO LOCAL É A MAIS PRÓXIMA E É QUE SUPERIOR/PRIORITÁRIA
+
+# caso não tenha a variável na função/bloco, será a global
+
+print("\n__"*40)
+
+global_1 = 1
+glo_loc = 2
+
+print(f"Globais\nglobal_1 = {global_1}\nglobal_local = {glo_loc}")
+
+def funcao():
+    
+    glo_loc = 4
+    print(f"Globais\nglobal_local da funçao ={glo_loc}")
+
+#chamando a função
+funcao()
+print(f"Globais\nglobal_1 ={global_1}\nglobal_local final = {glo_loc}")
+
+# cconverões:
+
+# int -> float = x = float(y)
+# float -> int = x = int(y)
+# float -> int = x = round(y)- arredonda, joga valor para cima
+# str -> int = x = int(y)
+# float -> str = x = str(y)
+
+float_num_1 = 10.3
+float_num_2 = 10.5
+float_num_3 = 10.59
+
+convert_1 = int(float_num_1)
+convert_1_r = round(float_num_1)
+convert_2_r = round(float_num_2)
+convert_3_r = round(float_num_3)
+
+print(convert_1)
+print(convert_1_r)
+print(convert_2_r)
+print(convert_3_r)
+
+# _________________________ desafio _______________________
+
+#receber valor positivo, receber frase, converter numero para decinal, caracteres maiúsculas e depois print
+
+numero = int(input("valor maior que o, inteiro: "))
+texto = input("Digite uma frase: ")
+
+x = float(numero)
+texto = texto.upper()
+
+print(x)
+print(texto)
